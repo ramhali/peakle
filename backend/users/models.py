@@ -28,7 +28,7 @@ class UserFollowing(models.Model):
 class UserReviews(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reviews')
     review_text = models.TextField()
-    rating = models.IntegerField(max_length=5)
+    rating = models.IntegerField()
     date_reviewed = models.DateTimeField(auto_now_add=True)
 
 class UserLinks(models.Model):

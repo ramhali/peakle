@@ -33,5 +33,5 @@ class CourtReview(models.Model):
     court = models.ForeignKey('courts.Court', on_delete=models.CASCADE, related_name='reviews')
     user = models.ForeignKey('users.User', on_delete=models.CASCADE, related_name='court_reviews')
     review_text = models.TextField()
-    rating = models.IntegerField(max_length=5)
+    rating = models.IntegerField()
     date_reviewed = models.DateTimeField(auto_now_add=True)
