@@ -10,7 +10,7 @@ class User(AbstractUser):
         ('advanced', 'Advanced'),
     ]
 
-    user_id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     email = models.EmailField(unique=True)
     user_skill_level = models.CharField(max_length=20, choices=SKILL_LEVELS, default='beginner')
     phone_number = models.CharField(max_length=20, blank=True)
