@@ -17,6 +17,7 @@ class Booking(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     status = models.CharField(choices=RESERVATION_STATUS, default='awaiting_payment')
+    is_open_match = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
 class OpenMatch(models.Model):

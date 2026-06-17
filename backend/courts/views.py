@@ -1,9 +1,10 @@
 from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.views import APIView, Response
 
+from .models import Court
 from .serializers import CreateCourtSerializer, ListCourtSerializer, CourtDetailSerializer
 from .services import create_court
-from .models import Court
+
 
 # Create your views here.
 class CourtListView(ListAPIView):
